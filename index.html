@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>情緒覺察 × 平靜 × 療癒｜報名與選購</title>
+  <meta name="description" content="情緒覺察 × 平靜 × 療癒：活動報名、情緒圖庫與紀念品選購。" />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,"Noto Sans TC",sans-serif;line-height:1.6;background:#f3f4f6;color:#111827}
+    img{display:block;max-width:100%;height:auto}
+    :root{--card:#fff;--border:#e5e7eb;--muted:#6b7280;--radius:16px;--shadow:0 10px 30px rgba(2,8,23,.08);--primary:#0ea5e9}
+    .container{width:min(1200px,92vw);margin:0 auto}
+    header{padding:14px 0}
+    h1{font-size:22px;margin:0;display:flex;align-items:center;gap:10px}
+    h1 img{width:40px;height:40px}
+
+    /* --- 顶部版面（仿你附圖）--- */
+    .top-board{background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);padding:18px}
+    .board-grid{display:grid;grid-template-columns:1.2fr 1px .8fr;gap:18px;align-items:start}
+    .divider{width:1px;background:#c7c9cf;min-height:280px;margin:auto}
+
+    /* 左：情緒列 */
+    .emotion-row{display:flex;gap:24px;align-items:flex-end;flex-wrap:wrap}
+    .emo{display:grid;justify-items:center;gap:6px}
+    .emo figcaption{font-size:13px;color:#111827}
+
+    /* 右：紀念品 */
+    .gift-col{display:grid;gap:16px;justify-items:center}
+    .gift{display:grid;justify-items:center;gap:6px}
+    .gift figcaption{font-size:12px;color:#6b7280}
+
+    /* --- 表單區 --- */
+    .form-card{margin-top:18px;background:var(--card);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);padding:18px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr 1fr 280px;gap:16px;align-items:start}
+    label{font-weight:600}
+    input[type="text"],input[type="tel"],input[type="email"],textarea{width:100%;border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:#fff}
+    textarea{min-height:200px}
+
+    .side-box{border:1px dashed var(--border);border-radius:12px;padding:14px;display:grid;gap:12px;background:#fafafa}
+    .side-box h3{margin:0;font-size:16px}
+    .checklist{display:grid;gap:8px}
+
+    .btn-wrap{display:flex;justify-content:center;margin-top:20px}
+    .btn{appearance:none;border:none;background:#e5e7eb;border-radius:999px;padding:10px 28px;cursor:pointer}
+    .btn.primary{background:linear-gradient(180deg,var(--primary),#0284c7);color:#fff;box-shadow:0 8px 20px rgba(14,165,233,.35)}
+
+    /* 情緒回饋 */
+    #emotionReward{display:none;margin-top:14px}
+    #emotionReward.show{display:block}
+    .reward-card{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center;background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);padding:12px}
+
+    @media (max-width:960px){
+      .board-grid{grid-template-columns:1fr;gap:12px}
+      .divider{display:none}
+      .form-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23f59e0b'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-size='48'%3E%F0%9F%A6%8A%3C/text%3E%3C/svg%3E" alt="狐狸Icon"/>
+        情緒覺察 × 平靜 × 療癒
+      </h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="top-board">
+      <div class="board-grid">
+        <!-- 左：情緒們 -->
+        <div>
+          <div class="emotion-row">
+            <figure class="emo">
+              <img src="image/fox-love1.png" alt="Love 表情" width="90" height="90"/>
+              <figcaption>Love</figcaption>
+            </figure>
+            <figure class="emo">
+              <img src="image/fox-love2.png" alt="Love 2 表情" width="90" height="90"/>
+              <figcaption>Love</figcaption>
+            </figure>
+            <figure class="emo">
+              <img src="image/fox-anger.png" alt="Anger 表情" width="90" height="90"/>
+              <figcaption>Anger</figcaption>
+            </figure>
+            <figure class="emo">
+              <img src="image/fox-sad.png" alt="Sadness 表情" width="90" height="90"/>
+              <figcaption>Sadness</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- 中：分隔線 -->
+        <div class="divider" aria-hidden="true"></div>
+
+        <!-- 右：紀念品示意 -->
+        <div class="gift-col">
+          <figure class="gift">
+            <img src="image/coaster.png" alt="杯墊示意圖" width="120" height="120"/>
+            <figcaption>杯墊示意圖</figcaption>
+          </figure>
+          <figure class="gift">
+            <img src="image/keychain.png" alt="鑰匙圈示意圖" width="90" height="140"/>
+            <figcaption>鑰匙圈示意圖</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- 表單 -->
+      <form id="signupForm" class="form-card" novalidate>
+        <div class="form-grid">
+          <div>
+            <label for="name">姓名</label>
+            <input type="text" id="name" name="name" required placeholder="王小明"/>
+          </div>
+          <div>
+            <label for="phone">電話</label>
+            <input type="tel" id="phone" name="phone" inputmode="tel" placeholder="09xxxxxxxx" pattern="^[0-9\-\+\s]{8,}$" required/>
+          </div>
+          <div>
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required/>
+          </div>
+
+          <!-- 右側：選購 + 搭配表情 -->
+          <aside class="side-box">
+            <h3>選購：</h3>
+            <div class="checklist">
+              <label><input type="checkbox" name="product" value="keychain"> 鑰匙圈</label>
+              <label><input type="checkbox" name="product" value="coaster"> 杯墊</label>
+            </div>
+            <h3>搭配表情</h3>
+            <div class="checklist">
+              <label><input type="checkbox" name="mood" value="love"> love</label>
+              <label><input type="checkbox" name="mood" value="love2"> love 2</label>
+              <label><input type="checkbox" name="mood" value="anger"> Anger</label>
+              <label><input type="checkbox" name="mood" value="sad"> Sadness</label>
+            </div>
+          </aside>
+
+          <div style="grid-column:1/-1">
+            <label for="message">備註</label>
+            <textarea id="message" name="message" placeholder="想說的話、數量需求或客製說明"></textarea>
+          </div>
+        </div>
+
+        <div class="btn-wrap">
+          <button class="btn primary" type="submit">送出</button>
+        </div>
+
+        <p id="formError" style="color:#dc2626" hidden></p>
+        <div id="successMessage" style="display:none;margin-top:8px">✅ 感謝您的提交！</div>
+
+        <!-- 提交後情緒回饋 -->
+        <div id="emotionReward">
+          <div class="reward-card">
+            <img id="rewardImg" alt="情緒回饋圖"/>
+            <div>
+              <strong id="rewardTitle">你的今日情緒：</strong>
+              <div id="rewardDesc" style="color:#6b7280"></div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    const EMOTION_IMAGES = [
+      { key:'love', label:'Love', desc:'把愛分享出去，今天會更好。', src:'image/fox-love1.png' },
+      { key:'love2', label:'Love 2', desc:'柔軟而堅定的溫暖～', src:'image/fox-love2.png' },
+      { key:'anger', label:'Anger', desc:'深呼吸一下，能量化為動力。', src:'image/fox-anger.png' },
+      { key:'sad', label:'Sadness', desc:'給自己一點時間與擁抱。', src:'image/fox-sad.png' }
+    ];
+
+    (function(){
+      const form = document.getElementById('signupForm');
+      const err = document.getElementById('formError');
+      const ok = document.getElementById('successMessage');
+      const reward = document.getElementById('emotionReward');
+      const rewardImg = document.getElementById('rewardImg');
+      const rewardTitle = document.getElementById('rewardTitle');
+      const rewardDesc = document.getElementById('rewardDesc');
+
+      function showError(msg){ err.textContent = msg; err.hidden = !msg }
+
+      function pickEmotion(){
+        // 若使用者有勾選搭配表情，就從勾選裡挑；否則隨機
+        const picked = [...document.querySelectorAll('input[name="mood"]:checked')].map(x=>x.value);
+        const pool = picked.length? EMOTION_IMAGES.filter(e=>picked.includes(e.key)) : EMOTION_IMAGES;
+        return pool[Math.floor(Math.random()*pool.length)]
+      }
+
+      form.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        showError('');
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        if(!name) return showError('請輸入姓名');
+        if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return showError('請輸入有效的 email');
+        if(!/^[0-9\-\+\s]{8,}$/.test(phone)) return showError('請輸入有效的電話');
+
+        ok.style.display = 'block';
+        const emo = pickEmotion();
+        rewardImg.src = emo.src;
+        rewardTitle.textContent = '你的今日情緒：' + emo.label;
+        rewardDesc.textContent = emo.desc;
+        reward.classList.add('show');
+        reward.scrollIntoView({behavior:'smooth', block:'center'});
+      });
+    })();
+  </script>
+</body>
+</html>
