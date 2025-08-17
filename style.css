@@ -1,0 +1,121 @@
+/* 基本設定 */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans TC", sans-serif;
+  line-height: 1.6;
+  background: #f3f4f6;
+  color: #111827;
+}
+img { max-width: 100%; height: auto; display: block; }
+
+.container { width: min(1200px, 92vw); margin: 24px auto; }
+
+/* 標題列（照 wireframe 風格，簡單乾淨） */
+.page-header { padding: 6px 4px 18px; }
+.page-header h1 { font-size: 28px; font-weight: 800; }
+
+/* 上方主版面：左 | 中 | 右 */
+.board {
+  background:#fff; border:1px solid #e5e7eb; border-radius:12px;
+  box-shadow:0 10px 30px rgba(2,8,23,.06); padding:18px;
+}
+
+/* 桌機：三欄（左 2fr | 中 1px | 右 1fr） */
+.board-grid {
+  display: grid;
+  grid-template-columns: 2fr 1px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+.divider { width:1px; background:#c7c9cf; min-height:300px; margin:auto; }
+
+/* 左：情緒（縮小圖案） */
+.small-label { font-size: 12px; color:#6b7280; margin: 0 0 10px; }
+.small-label.right { text-align: right; }
+.emotions { display:flex; gap:28px; align-items:flex-end; flex-wrap:wrap; }
+.emo { display:grid; justify-items:center; gap:6px; }
+.emo img { width: 64px; height: auto; }     /* ← 調小情緒圖大小 */
+.emo figcaption { font-size: 12px; color:#111827; }
+
+/* 右：紀念品（縮小且置中） */
+.gifts { display:grid; gap:22px; justify-items:center; align-content:start; }
+.gift { display:grid; justify-items:center; gap:6px; }
+.gift .coaster { width: 68px; }                /* ← 杯墊縮小 */
+.gift .keychain { height: 110px; width:auto; } /* ← 鑰匙圈較瘦高 */
+.gift figcaption { font-size: 12px; color:#6b7280; }
+
+/* 表單 */
+.form {
+  margin-top:20px; background:#fff; border:1px solid #e5e7eb;
+  border-radius:12px; box-shadow:0 10px 30px rgba(2,8,23,.06); padding:18px;
+}
+.form-grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr minmax(260px, 320px);
+  gap:16px; align-items:start;
+}
+
+label { font-weight:700; display:block; margin-bottom:4px; }
+input[type="text"], input[type="tel"], input[type="email"], textarea {
+  width:100%; border:1px solid #e5e7eb; border-radius:12px;
+  padding:12px 14px; background:#fff;
+}
+
+/* 右側側欄（灰色方塊） */
+.side {
+  border:1px dashed #e5e7eb; border-radius:12px;
+  padding:14px; display:grid; gap:12px; background:#fafafa;
+}
+.panel {
+  background:#e5e7eb; border-radius:10px; padding:10px 12px; display:grid; gap:8px;
+}
+.panel h3 { margin:0 0 6px; font-size:16px; font-weight:700; }
+
+/* 備註（左文字右灰框） */
+.remark {
+  display:grid; grid-template-columns: 80px 1fr; gap:16px;
+  align-items:start; grid-column:1 / -1;
+}
+.remark textarea { min-height: 240px; background:#e5e7eb; }
+
+/* 送出按鈕（灰色膠囊） */
+.btn-wrap { display:flex; justify-content:center; margin-top:16px; grid-column:1 / -1; }
+.btn {
+  appearance:none; border:none; background:#e5e7eb; color:#111827;
+  border-radius:999px; padding:10px 28px; cursor:pointer; font-weight:600;
+}
+
+/* 訊息 */
+.error { color:#dc2626; margin-top:8px; }
+.ok { margin-top:8px; }
+
+/* RWD：<=960px 單欄；<=600px 按鈕滿版 */
+@media (max-width:960px){
+  .board-grid { grid-template-columns:1fr; }
+  .divider { display:none; }
+  .form-grid { grid-template-columns:1fr; }
+}
+@media (max-width:600px){
+  .btn { width:100%; max-width:240px; }
+}
+
+/* --- 提交後的情緒回饋卡片 --- */
+.reward {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 12px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(2,8,23,.06);
+  padding: 10px;
+}
+.reward img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+.reward .helper { color:#6b7280; font-size: 14px; margin-top: 4px; }
